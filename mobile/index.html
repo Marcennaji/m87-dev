@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>M87 DEV — Ingénierie logicielle & Formation</title>
+  <meta name="description" content="M87 DEV — Développement, conseil et formations professionnelles en architecture logicielle." />
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+
+<body>
+<header>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="offres.html">Offres</a>
+    <a href="formations.html">Formations</a>
+    <a href="organisme.html">Organisme</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div style="text-align: center; margin: 24px 0 16px;">
+    <img src="../img/logo_transparent.png" alt="M87 DEV" style="filter: brightness(0) invert(1);">
+  </div>
+
+  <div style="text-align: center; margin-top: 20px;">
+    <span class="tag">C++</span>
+    <span class="tag">Python</span>
+    <span class="tag">Architecture</span>
+    <span class="tag">Assistants IA</span>
+  </div>
+</header>
+
+<main>
+  <section class="text-center">
+    <h1>Ingénierie logicielle & Formation</h1>
+    <p class="muted">
+      <strong>M87 DEV</strong> accompagne les professionnels et les entreprises dans leurs projets de développement et propose des formations en architecture logicielle.
+    </p>
+  </section>
+
+  <section>
+    <h2>Offres</h2>
+    <div class="card">
+      <h3>Développement</h3>
+      <p>Développement C++ / Python, qualité et tests</p>
+      <a href="offres.html" class="cta">En savoir plus</a>
+    </div>
+    <div class="card">
+      <h3>Conseil & Architecture</h3>
+      <p>Audit, conception, accompagnement d'équipe</p>
+      <a href="offres.html" class="cta">En savoir plus</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Formations</h2>
+    <div class="card highlight">
+      <h3>Architecture hexagonale</h3>
+      <p class="muted small">1-2 jours • Junior à confirmé</p>
+      <p>Conception de logiciels testables, maintenables et évolutifs</p>
+      <a href="formation-architecture-hexagonale.html" class="cta">Voir le programme</a>
+    </div>
+    <a href="formations.html" class="cta secondary">Toutes les formations</a>
+  </section>
+
+  <section>
+    <h2>Informations</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>M87 DEV</h3>
+        <p class="small">SASU au capital de 1 000 €<br>
+        SIREN : 929 528 503<br>
+        RCS Saint-Brieuc</p>
+      </div>
+      <div class="card">
+        <h3>Organisme de formation</h3>
+        <p class="small">Déclaration d'activité : En cours<br>
+        Certification Qualiopi : En cours</p>
+        <a href="organisme.html">En savoir plus</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-center">
+    <h2>Me contacter</h2>
+    <p>Pour toute demande de devis ou question</p>
+    <a href="contact.html" class="cta">Contactez-moi</a>
+  </section>
+</main>
+
+<footer>
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; margin-bottom: 16px;">
+    <img src="../img/logo.png" alt="M87 DEV">
+    <span style="font-weight: 600; color: var(--primary);">M87 DEV</span>
+  </div>
+  <p>© <span id="y"></span> M87 DEV</p>
+  <p style="margin-top: 12px;">
+    <a href="../legal/mentions-legales.html">Mentions légales</a> •
+    <a href="../legal/cgv.html">CGV</a>
+  </p>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

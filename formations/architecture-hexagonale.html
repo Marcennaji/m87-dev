@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Formation Architecture Hexagonale (Ports & Adapters) — M87 DEV</title>
+  <meta name="description" content="Formation professionnelle en architecture hexagonale appliquée. Concevez des logiciels testables, maintenables et évolutifs en Python ou C++." />
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+<header>
+  <nav class="small">
+    <a href="../index.html">Accueil</a>
+    <a href="../pages/offres.html">Offres</a>
+    <a href="../pages/formations.html">Formations</a>
+    <a href="../pages/organisme.html">Organisme</a>
+    <a href="../pages/a-propos.html">À propos</a>
+    <a href="../pages/contact.html">Contact</a>
+  </nav>
+
+  <div style="text-align: center; margin-top: 24px;">
+    <h1>Formation Architecture Hexagonale Appliquée</h1>
+    <p class="muted" style="font-size: 18px;">Conception de logiciels testables, maintenables et évolutifs</p>
+    <p style="margin-top: 20px;">
+      <span class="tag">Architecture</span>
+      <span class="tag">Design Patterns</span>
+      <span class="tag">Python / C++</span>
+      <span class="tag">1-2 jours</span>
+    </p>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h2>Le problème</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Code difficile à tester</h3>
+        <p>Logique métier couplée avec frameworks et base de données. Tests impossibles sans infrastructure lourde.</p>
+      </div>
+      <div class="card">
+        <h3>Dépendances mêlées</h3>
+        <p>Domaine métier dépend de détails techniques (ORM, HTTP, UI). Changement technique impacte la logique métier.</p>
+      </div>
+      <div class="card">
+        <h3>Refactorings coûteux</h3>
+        <p>Remplacer une technologie devient un projet risqué. Migrations longues et dangereuses.</p>
+      </div>
+      <div class="card">
+        <h3>Dette technique croissante</h3>
+        <p>Plus le projet avance, plus il devient difficile à faire évoluer. Les assistants IA amplifient le problème.</p>
+      </div>
+    </div>
+
+    <div class="card highlight" style="margin-top: 32px;">
+      <p>
+        <strong>Ce ne sont pas des problèmes de langage, mais d'architecture.</strong><br>
+        L'architecture hexagonale (Ports & Adapters) résout ces problèmes structurellement.
+      </p>
+    </div>
+  </section>
+
+  <section style="background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);">
+    <h2>La solution : Architecture Hexagonale</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Domaine métier isolé</h3>
+        <p>Logique métier pure, sans dépendance technique. Tests unitaires rapides et simples.</p>
+      </div>
+      <div class="card">
+        <h3>Interchangeabilité</h3>
+        <p>Changez une base de données, un framework, une API sans toucher au métier.</p>
+      </div>
+      <div class="card">
+        <h3>Testabilité</h3>
+        <p>Tests du domaine sans infrastructure. Mocks simples pour les adaptateurs.</p>
+      </div>
+      <div class="card">
+        <h3>Évolutivité</h3>
+        <p>Ajoutez de nouvelles technologies sans risque. Migrations progressives possibles.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Objectifs de la formation</h2>
+    <div class="card">
+      <p><strong>À l'issue de la formation, vous serez capable de :</strong></p>
+      <ul>
+        <li>Concevoir une architecture hexagonale complète</li>
+        <li>Séparer clairement le domaine métier des détails techniques</li>
+        <li>Définir ports (interfaces) et adaptateurs (implémentations)</li>
+        <li>Rendre votre code 100% testable sans infrastructure</li>
+        <li>Refactorer une application existante vers cette architecture</li>
+        <li>Utiliser efficacement les assistants IA avec une architecture solide</li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);">
+    <h2>À qui s'adresse cette formation ?</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Public visé</h3>
+        <ul>
+          <li>Développeurs (junior à confirmé)</li>
+          <li>Architectes logiciels</li>
+          <li>Tech leads</li>
+          <li>Ingénieurs qualité logicielle</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Prérequis</h3>
+        <ul>
+          <li>Connaissances en Python ou C++</li>
+          <li>Bases de programmation orientée objet</li>
+          <li>Expérience d'un projet de développement</li>
+          <li>Ordinateur portable pour les exercices</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Programme détaillé</h2>
+    <p class="muted small" style="text-align: center; margin-bottom: 32px;">Adapté à vos besoins : exemples en Python ou C++</p>
+
+    <div class="card">
+      <h3>Module 1 : Les fondations</h3>
+      <ul>
+        <li>Principes d'architecture : couplage, cohésion, inversion de dépendances</li>
+        <li>Problèmes des architectures classiques (layered, MVC)</li>
+        <li>Introduction à l'architecture hexagonale</li>
+        <li>Vocabulaire : domaine, ports primaires, ports secondaires, adaptateurs</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Module 2 : Structure et conception</h3>
+      <ul>
+        <li>Organisation des dossiers et modules</li>
+        <li>Le noyau métier : entités, value objects, agrégats</li>
+        <li>Définition des ports (interfaces)</li>
+        <li>Use cases et services applicatifs</li>
+        <li>Règles de dépendance</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Module 3 : Implémentation pratique</h3>
+      <ul>
+        <li>Création du domaine métier pur</li>
+        <li>Ports primaires (API, CLI, interface utilisateur)</li>
+        <li>Ports secondaires (base de données, API externes, fichiers)</li>
+        <li>Injection de dépendances</li>
+        <li>Configuration et bootstrap de l'application</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Module 4 : Tests et qualité</h3>
+      <ul>
+        <li>Tests unitaires du domaine (sans infrastructure)</li>
+        <li>Tests d'intégration avec adaptateurs réels</li>
+        <li>Mocks et stubs pour les ports</li>
+        <li>Tests d'acceptance</li>
+        <li>Coverage et qualité</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Module 5 : Refactoring et évolution</h3>
+      <ul>
+        <li>Refactoring progressif d'une application existante</li>
+        <li>Stratégies de migration</li>
+        <li>Cohabitation avec du code legacy</li>
+        <li>Patterns complémentaires (CQRS, Event Sourcing)</li>
+        <li>Utilisation efficace des assistants IA (GitHub Copilot, ChatGPT...)</li>
+      </ul>
+    </div>
+
+    <div class="card highlight">
+      <h3>Livrables inclus</h3>
+      <ul>
+        <li>Support de formation complet (PDF)</li>
+        <li>Code source des exemples (Python ou C++)</li>
+        <li>Exercices et corrections</li>
+        <li>Template de projet architecture hexagonale</li>
+        <li>Guide des bonnes pratiques avec les assistants IA</li>
+        <li>Checklist de refactoring</li>
+        <li>Attestation de formation</li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);">
+    <h2>Pourquoi cette formation est différente</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Interactive, pas un MOOC</h3>
+        <p>Sessions avec exercices sur du code réel. Questions-réponses en continu.</p>
+      </div>
+      <div class="card">
+        <h3>Exemples de l'industrie</h3>
+        <p>Cas concrets tirés de 35 ans d'expérience, pas d'exemples simplistes.</p>
+      </div>
+      <div class="card">
+        <h3>Adaptation à votre contexte</h3>
+        <p>Exemples et exercices dans votre langage (Python ou C++). Discussions sur vos projets.</p>
+      </div>
+      <div class="card">
+        <h3>Feedback direct</h3>
+        <p>Revue de votre code. Conseils personnalisés. Réponses à vos questions spécifiques.</p>
+      </div>
+      <div class="card">
+        <h3>IA et assistants de code</h3>
+        <p>Comment utiliser efficacement GitHub Copilot, ChatGPT avec une architecture solide. Éviter l'amplification de dette technique.</p>
+      </div>
+    </div>
+
+    <div class="card highlight" style="margin-top: 32px;">
+      <p>
+        <strong>L'objectif n'est pas la théorie, mais l'impact immédiat sur vos projets.</strong><br>
+        Vous repartez avec des connaissances applicables dès le lendemain.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>À propos du formateur</h2>
+    <div class="card">
+      <p>
+        <strong>Marc Ennaji</strong> — Ingénieur logiciel avec 35 ans d'expérience en développement,
+        architecture et conseil. Formateur dans des écoles d'ingénieurs pendant plusieurs années.
+      </p>
+      <p style="margin-top: 16px;">
+        Spécialisé en C++ et Python, passionné par la qualité logicielle et les architectures robustes.
+        A conduit un audit des pratiques de développement pour Orange et piloté une cellule "génie logiciel".
+      </p>
+      <p style="margin-top: 20px;">
+        <a href="../pages/a-propos.html" class="cta">En savoir plus</a>
+      </p>
+    </div>
+  </section>
+
+  <section style="background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);">
+    <h2>Modalités pratiques</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Durée</h3>
+        <p>1 à 2 jours selon vos besoins et niveau</p>
+      </div>
+      <div class="card">
+        <h3>Format</h3>
+        <p>Présentiel ou distanciel (visioconférence)</p>
+      </div>
+      <div class="card">
+        <h3>Participants</h3>
+        <p>4 à 8 personnes maximum (inter-entreprises ou intra-entreprise)</p>
+      </div>
+      <div class="card">
+        <h3>Méthodes</h3>
+        <p>Alternance théorie/pratique, exercices, études de cas, discussions</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Tarifs</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Intra-entreprise</h3>
+        <p><strong>Sur devis</strong></p>
+        <p class="small muted" style="margin-top: 12px;">
+          Tarif adapté à la durée, au nombre de participants et aux modalités.
+          Formation dans vos locaux ou à distance.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Financement</h3>
+        <p><strong>Prise en charge possible</strong></p>
+        <ul class="small" style="margin-top: 12px;">
+          <li>OPCO (Opérateurs de Compétences)</li>
+          <li>Pôle Emploi (AIF)</li>
+          <li>CPF : En cours de référencement</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card highlight" style="margin-top: 24px;">
+      <p>
+        <strong>Organisme de formation déclaré</strong><br>
+        Numéro de déclaration d'activité en cours d'obtention. Certification Qualiopi en préparation.
+      </p>
+      <p class="small muted" style="margin-top: 12px;">
+        <a href="../pages/organisme.html" style="color: var(--primary);">En savoir plus sur l'organisme de formation</a>
+      </p>
+    </div>
+  </section>
+
+  <section style="background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);">
+    <h2>Accessibilité</h2>
+    <div class="card">
+      <p>
+        Cette formation est accessible aux personnes en situation de handicap.
+        Des aménagements peuvent être mis en place selon les besoins.
+      </p>
+      <p style="margin-top: 16px;">
+        Pour toute demande d'adaptation, merci de nous contacter en amont : 
+        <a href="mailto:m87-dev@pm.me" style="color: var(--primary);">m87-dev@pm.me</a>
+      </p>
+    </div>
+  </section>
+
+  <section style="text-align: center;">
+    <h2>Intéressé par cette formation ?</h2>
+    <p>Demandez un devis personnalisé</p>
+    <p style="margin-top: 24px;">
+      <a class="cta" href="../pages/contact.html">Demander un devis</a>
+    </p>
+    <p style="margin-top: 16px; font-size: 14px;" class="muted">
+      <a href="../legal/cgv.html" style="color: var(--primary);">Voir les conditions générales de vente</a>
+    </p>
+  </section>
+</main>
+
+<footer class="small muted">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 12px;">
+    <img src="../img/logo.png" alt="M87 DEV" style="height: 32px; width: auto;">
+    <span style="font-weight: 600; color: var(--primary);">M87 DEV</span>
+  </div>
+  <p>© <span id="y"></span> M87 DEV — Tous droits réservés.</p>
+  <p style="margin-top: 12px;">
+    <a href="../legal/mentions-legales.html" style="color: var(--primary); margin: 0 8px;">Mentions légales</a> •
+    <a href="../legal/cgv.html" style="color: var(--primary); margin: 0 8px;">CGV</a>
+  </p>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

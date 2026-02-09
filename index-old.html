@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>M87 DEV — Ingénierie logicielle, développement & formation</title>
+  <meta name="description" content="M87 DEV — Prestations de développement, conseil et formations professionnelles (présentiel / distanciel)." />
+  <style>
+    :root { 
+      --max: 980px; 
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --primary-light: #dbeafe;
+      --accent: #0891b2;
+      --success: #059669;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-600: #4b5563;
+      --gray-900: #111827;
+    }
+    body { 
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; 
+      margin: 0; 
+      line-height: 1.6; 
+      color: #333;
+      background: var(--gray-50);
+    }
+    header, main, footer { max-width: var(--max); margin: 0 auto; padding: 24px; }
+    header { 
+      padding: 48px 24px 36px; 
+      background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+      border-bottom: 3px solid var(--primary);
+      margin-bottom: 20px;
+    }
+    nav a { 
+      margin-right: 14px; 
+      text-decoration: none; 
+      color: var(--primary);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--primary-dark); }
+    .tag { 
+      display:inline-block; 
+      padding:6px 14px; 
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border-radius:999px; 
+      margin: 6px 6px 0 0; 
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid var(--primary);
+    }
+    .card { 
+      border: 1px solid var(--gray-200); 
+      border-radius: 14px; 
+      padding: 24px; 
+      margin: 16px 0; 
+      background: white;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .card:hover { 
+      box-shadow: 0 4px 12px rgba(37,99,235,0.1);
+      transform: translateY(-2px);
+    }
+    .card h3 { 
+      color: var(--primary-dark); 
+      margin-top: 0;
+      border-bottom: 2px solid var(--primary-light);
+      padding-bottom: 8px;
+    }
+    h1 { 
+      margin: 0 0 12px; 
+      font-size: 38px; 
+      color: var(--gray-900);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    h2 { 
+      margin: 40px 0 16px; 
+      font-size: 26px; 
+      color: var(--gray-900);
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
+    }
+    .muted { color: var(--gray-600); }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    @media (min-width: 860px) { .grid { grid-template-columns: 1fr 1fr; } }
+    ul { padding-left: 20px; }
+    li { margin: 8px 0; }
+    .cta { 
+      display:inline-block; 
+      padding:12px 24px; 
+      background: var(--primary);
+      color: white;
+      border-radius: 10px; 
+      text-decoration:none; 
+      font-weight: 600;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 2px 8px rgba(37,99,235,0.3);
+    }
+    .cta:hover { 
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(37,99,235,0.4);
+    }
+    .small { font-size: 14px; }
+    section { 
+      background: white;
+      border-radius: 16px;
+      padding: 32px 24px;
+      margin: 24px 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    footer {
+      background: var(--gray-100);
+      border-top: 1px solid var(--gray-200);
+      margin-top: 60px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <nav class="small">
+    <a href="#offres">Offres</a>
+    <a href="#formations">Formations</a>
+    <a href="#organisme-formation">Organisme de formation</a>
+    <a href="#a-propos">À propos</a>
+    <a href="#informations-legales">Informations légales</a>
+    <a href="#cgv">CGV Formations</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div style="text-align: center; margin: 40px 0 32px;">
+    <img src="img/logo_transparent.png" alt="M87 DEV - Ingénierie logicielle, Développement, Conseil, Formation" style="height: 260px; width: auto;">
+  </div>
+
+  <div>
+    <span class="tag">C++</span>
+    <span class="tag">Python</span>
+    <span class="tag">Architecture hexagonale</span>
+    <span class="tag">Design patterns</span>
+    <span class="tag">Qualité logicielle</span>
+    <span class="tag">Assistants de code IA (bonnes pratiques)</span>
+  </div>
+</header>
+
+<main>
+  <section id="offres">
+    <h2>Offres</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Développement</h3>
+        <ul>
+          <li>Développement logiciel (C++ / Python)</li>
+          <li>Conception et implémentation de composants</li>
+          <li>Qualité : tests, refactoring, outillage</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Conseil / Architecture</h3>
+        <ul>
+          <li>Audit d’architecture et recommandations</li>
+          <li>Conception (modularité, maintenabilité, testabilité)</li>
+          <li>Accompagnement d’équipe (revues, bonnes pratiques)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="formations">
+    <h2>Formations professionnelles</h2>
+    <p>
+      Formations professionnalisantes à destination de professionnels et particuliers.<br>
+      <strong>Formats :</strong> présentiel ou distanciel • <strong>Langages :</strong> Python ou C++ selon besoins<br>
+      <strong>Financement :</strong> entreprise, OPCO, pôle emploi (CPF en cours de référencement)
+    </p>
+
+    <div class="card">
+      <h3>🎓 Architecture hexagonale (Ports & Adapters)</h3>
+      <p><strong>Durée :</strong> 1 ou 2 jours (7h ou 14h) • <strong>Niveau :</strong> Junior à confirmé</p>
+      
+      <p><strong>Objectifs pédagogiques :</strong></p>
+      <ul>
+        <li>Structurer une application autour d'un cœur métier indépendant</li>
+        <li>Isoler les dépendances techniques (BDD, API, frameworks)</li>
+        <li>Concevoir des applications testables et maintenables</li>
+        <li>Refactorer un code existant vers une architecture hexagonale</li>
+      </ul>
+      
+      <p><strong>Public visé :</strong> Développeurs, tech leads</p>
+      <p><strong>Prérequis :</strong> Connaissance de Python ou C++, connaissances en POO</p>
+      
+      <p><strong>Méthodes pédagogiques :</strong></p>
+      <ul>
+        <li>Exposés théoriques avec exemples concrets</li>
+        <li>Ateliers pratiques (70% pratique / 30% théorie)</li>
+        <li>Études de cas issus de projets réels</li>
+        <li>Revue de code et feedback personnalisé</li>
+      </ul>
+      
+      <p><strong>Modalités d'évaluation :</strong> QCM, exercices pratiques, mise en situation</p>
+      <p><strong>Livrables :</strong> Support PDF, code source des exemples, exercices corrigés, attestation de formation</p>
+      <p class="small muted">Délai d'accès : sous 15 jours • Adaptation possible selon votre contexte projet</p>
+      
+      <p style="margin-top: 16px;">
+        <a class="cta" href="formation-architecture-hexagonale.html">📖 Voir le programme détaillé</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🎓 Programmation Orientée Objet & Conception C++</h3>
+      <p><strong>Durée :</strong> 1 à 3 jours (sur mesure) • <strong>Niveau :</strong> Débutant à intermédiaire</p>
+      
+      <p><strong>Objectifs pédagogiques :</strong></p>
+      <ul>
+        <li>Maîtriser les principes SOLID et l'encapsulation</li>
+        <li>Appliquer les design patterns essentiels (Factory, Strategy, Adapter...)</li>
+        <li>Utiliser les bonnes pratiques C++ moderne (RAII, move semantics, const-correctness)</li>
+        <li>Concevoir du code maintenable et évolutif</li>
+      </ul>
+      
+      <p><strong>Public visé :</strong> Développeurs C++, ingénieurs logiciels</p>
+      <p><strong>Prérequis :</strong> Bases en C++ ou langage orienté objet</p>
+      <p><strong>Méthodes pédagogiques :</strong> Alternance théorie/pratique, exercices progressifs, code reviews</p>
+      <p><strong>Modalités d'évaluation :</strong> Exercices pratiques, projet fil rouge</p>
+    </div>
+
+    <div class="card">
+      <h3>🎓 Qualité Logicielle et refactoring</h3>
+      <p><strong>Durée :</strong> Sur mesure (1 à 5 jours) • <strong>Niveau :</strong> Tous niveaux</p>
+      
+      <p><strong>Objectifs pédagogiques :</strong></p>
+      <ul>
+        <li>Mettre en place une stratégie de tests (unitaires, intégration)</li>
+        <li>Identifier et réduire la dette technique</li>
+        <li>Structurer un projet (documentation, ADR, conventions)</li>
+        <li>Pratiquer la revue de code efficace</li>
+      </ul>
+      
+      <p><strong>Public visé :</strong> Équipes de développement</p>
+      <p><strong>Méthodes pédagogiques :</strong> Audit de code existant, coaching, ateliers pratiques</p>
+      <p><strong>Modalités d'évaluation :</strong> Plan d'action personnalisé, suivi post-formation</p>
+    </div>
+  </section>
+
+  <section id="organisme-formation">
+    <h2>Organisme de formation</h2>
+    
+    <div class="card">
+      <h3>📋 Informations légales organisme</h3>
+      <p><strong>Raison sociale :</strong> M87 DEV (SASU)</p>
+      <p><strong>SIREN :</strong> 929 528 503</p>
+      <p><strong>Déclaration d'activité :</strong> En cours d'obtention (NDA)</p>
+      <p><strong>Certification Qualiopi :</strong> En cours (objectif : référencement CPF)</p>
+     </div>
+
+    <div class="card">
+      <h3>♿ Accessibilité des formations</h3>
+      <p>
+        M87 DEV s'engage à rendre ses formations accessibles aux personnes en situation de handicap.
+      </p>
+      <ul>
+        <li><strong>Formations distancielles :</strong> accessibles depuis tout poste informatique équipé</li>
+        <li><strong>Formations présentielles :</strong> adaptation des locaux selon les besoins</li>
+        <li><strong>Supports pédagogiques :</strong> formats adaptés disponibles sur demande</li>
+        <li><strong>Rythme et durée :</strong> adaptables selon les situations</li>
+      </ul>
+      <p>
+        <strong>Référent handicap :</strong> Pour toute situation nécessitant une adaptation, 
+        contactez-nous au moins 15 jours avant le début de la formation : 
+        <a href="mailto:m87-dev@pm.me">m87-dev@pm.me</a>
+      </p>
+      <p class="small muted">
+        Nous travaillons en partenariat avec des organismes spécialisés (AGEFIPH, Cap Emploi) 
+        pour garantir les meilleures conditions d'accueil.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📊 Indicateurs de qualité</h3>
+      <p><strong>Organisme récemment créé</strong> (2025) - Indicateurs en cours de constitution :</p>
+      <ul>
+        <li><strong>Taux de satisfaction :</strong> N/A (nouvelles sessions)</li>
+        <li><strong>Taux d'assiduité :</strong> N/A</li>
+        <li><strong>Taux d'atteinte des objectifs :</strong> N/A</li>
+      </ul>
+      <p class="small muted">
+        Ces indicateurs seront mis à jour après chaque session de formation.
+        Toute réclamation peut être adressée à : m87-dev@pm.me
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>💰 Modalités financières</h3>
+      <p><strong>Tarifs formations :</strong></p>
+      <ul>
+        <li>Formation 1 jour (7h) : à partir de 900 € HT / personne (groupe : sur devis)</li>
+        <li>Formation 2 jours (14h) : à partir de 1 600 € HT / personne</li>
+        <li>Formation sur mesure : tarif selon durée et contenu</li>
+      </ul>
+      <p><strong>Financements acceptés :</strong></p>
+      <ul>
+        <li>Financement entreprise direct</li>
+        <li>OPCO (Opérateurs de Compétences)</li>
+        <li>Pôle Emploi (AIF)</li>
+        <li>Mon Compte Formation (CPF) : <em>En cours de référencement</em></li>
+      </ul>
+      <p class="small"><strong>Délai d'accès :</strong> Les formations sont accessibles sous 15 jours (selon disponibilités).</p>
+      <p class="small"><strong>Délai de rétractation :</strong> 10 jours (voir CGV).</p>
+    </div>
+  </section>
+
+  <section id="a-propos">
+    <h2>À propos</h2>
+    <div class="card">
+      <h3>Le formateur</h3>
+      <p>
+        <strong>Ingénieur logiciel senior</strong> avec 35 ans d'expérience en développement et architecture logicielle.
+      </p>
+        </div>
+      </div>
+      <p><strong>Expertise technique :</strong></p>
+      <ul>
+        <li>Architecture logicielle (hexagonale, clean architecture, microservices)</li>
+        <li>Développement C++ moderne et Python</li>
+        <li>Conception orientée objet (SOLID, design patterns)</li>
+        <li>Qualité logicielle (tests, refactoring, code reviews)</li>
+      </ul>
+      
+      <p><strong>Expérience notable :</strong></p>
+      <ul>
+        <li><strong>Orange :</strong> Audit des pratiques de développement de la Direction des Opérations Portail (~30 projets), et pilotage d'une cellule "génie logiciel" dédiée à l'amélioration continue des pratiques (en tant que prestataire)</li>
+        <li>Accompagnement d'équipes techniques sur la qualité et l'architecture</li>
+        <li>Mise en place d'une plate-forme CI/CD commune aux projets, pour le suivi de la qualité logicielle</li>
+        <li>Formation des équipes de développement aux bonnes pratiques (tests, refactoring continu, code reviews)</li>
+      </ul>
+      
+      <p><strong>Expérience pédagogique :</strong></p>
+      <ul>
+        <li>Enseignant vacataire en architecture logicielle (BUT Informatique)</li>
+        <li>Formations professionnelles en entreprise</li>
+        <li>Animation d'ateliers et coaching technique</li>
+      </ul>
+      
+      <p style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--gray-200);">
+        <a href="https://www.linkedin.com/in/marcennaji/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; background: #0077b5; color: white; text-decoration: none; border-radius: 8px; font-weight: 500; transition: background 0.2s;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          Voir mon profil LinkedIn
+        </a>
+      </p>
+      
+      <p class="small muted">
+        Approche pragmatique issue de projets industriels réels et d'une pratique pédagogique structurée.
+      </p>
+    </div>
+  </section>
+
+  <section id="informations-legales">
+    <h2>Informations légales</h2>
+    <div class="card small">
+      <p><b>Raison sociale :</b> M87 DEV</p>
+      <p><b>Forme juridique :</b> SASU (Société par Actions Simplifiée Unipersonnelle)</p>
+      <p><b>SIREN :</b> 929 528 503</p>
+      <p><b>RCS :</b> Saint-Brieuc 929 528 503</p>
+      <p><b>Siège social :</b> France</p>
+      <p><b>Capital social :</b> [À compléter]</p>
+      <p><b>TVA intracommunautaire :</b> [À compléter si applicable]</p>
+      <p><b>Responsable de publication :</b> M87 DEV</p>
+      <p><b>Hébergement :</b> GitHub Pages (GitHub, Inc. - San Francisco, CA, USA)</p>
+      <p><b>Contact :</b> <a href="mailto:m87-dev@pm.me">m87-dev@pm.me</a></p>
+    </div>
+  </section>
+
+  <section id="cgv">
+    <h2>Conditions Générales de Vente — Formations</h2>
+    <div class="card">
+      <p>
+        Les Conditions Générales de Vente définissent les droits et obligations dans le cadre de nos formations professionnelles.
+      </p>
+      <p>
+        <strong>Points clés :</strong>
+      </p>
+      <ul>
+        <li>Inscription validée après signature de convention et acompte de 30%</li>
+        <li>Droit de rétractation de 10 jours (personnes physiques)</li>
+        <li>Annulation : conditions selon délai de prévenance</li>
+        <li>Tarifs HT, TVA non applicable (art. 293 B du CGI)</li>
+        <li>Protection des données personnelles (RGPD)</li>
+        <li>Accessibilité handicap garantie</li>
+      </ul>
+      <p style="margin-top: 20px;">
+        <a class="cta" href="cgv.html" style="display: inline-block; padding: 10px 20px; background: #2563eb; color: white; text-decoration: none; border-radius: 8px;">
+          📄 Consulter les CGV complètes
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>
+        Pour toute demande d'information, devis ou inscription, contactez-nous :
+      </p>
+      <p>
+        <b>Email professionnel :</b>
+        <a href="mailto:m87-dev@pm.me">m87-dev@pm.me</a>
+      </p>
+      <p class="small">
+        <strong>Merci de préciser dans votre message :</strong>
+      </p>
+      <ul class="small">
+        <li>Votre besoin (formation, développement, conseil)</li>
+        <li>Votre contexte (entreprise, particulier, niveau)</li>
+        <li>Vos disponibilités et délais souhaités</li>
+        <li>Format préféré (présentiel / distanciel)</li>
+      </ul>
+      <p class="small muted">
+        <strong>Délai de réponse :</strong> Sous 48h ouvrées<br>
+        <strong>Référent handicap :</strong> Même contact pour toute demande d'adaptation
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="small muted">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 12px;">
+    <img src="img/logo.png" alt="M87 DEV" style="height: 32px; width: auto;">
+    <span style="font-weight: 600; color: var(--primary);">M87 DEV</span>
+  </div>
+  <p>© <span id="y"></span> M87 DEV — Tous droits réservés.</p>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

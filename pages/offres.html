@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Offres — M87 DEV</title>
+  <meta name="description" content="Services de développement, conseil et architecture logicielle proposés par M87 DEV." />
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+<header>
+  <nav class="small">
+    <a href="../index.html">Accueil</a>
+    <a href="offres.html">Offres</a>
+    <a href="formations.html">Formations</a>
+    <a href="organisme.html">Organisme</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h1>Offres de services</h1>
+  <p class="muted">Développement, conseil et architecture logicielle</p>
+</header>
+
+<main>
+  <section>
+    <h2>Développement logiciel</h2>
+    <div class="card">
+      <h3>Développement C++ / Python</h3>
+      <ul>
+        <li>Développement logiciel (C++ moderne / Python)</li>
+        <li>Conception et implémentation de composants</li>
+        <li>Intégration de bibliothèques et frameworks</li>
+        <li>Migration et modernisation de code legacy</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Qualité et tests</h3>
+      <ul>
+        <li>Mise en place de tests unitaires et d'intégration</li>
+        <li>Refactoring et amélioration de code existant</li>
+        <li>Outillage (CI/CD, analyseurs statiques, couverture)</li>
+        <li>Documentation technique</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Conseil & Architecture</h2>
+    <div class="card">
+      <h3>Audit d'architecture</h3>
+      <ul>
+        <li>Analyse de l'architecture existante</li>
+        <li>Identification des points faibles et recommandations</li>
+        <li>Plan de refactoring et d'amélioration</li>
+        <li>Rapport détaillé avec actions prioritaires</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Conception et architecture</h3>
+      <ul>
+        <li>Conception d'architecture (modularité, maintenabilité, testabilité)</li>
+        <li>Architecture hexagonale, clean architecture, microservices</li>
+        <li>Design patterns et principes SOLID</li>
+        <li>Architecture Decision Records (ADR)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Accompagnement d'équipe</h3>
+      <ul>
+        <li>Revues de code et pair programming</li>
+        <li>Coaching sur les bonnes pratiques</li>
+        <li>Mise en place de conventions et standards</li>
+        <li>Support technique ponctuel ou récurrent</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Expérience notable</h2>
+    <div class="card highlight">
+      <h3>Orange</h3>
+      <p>
+        <strong>Mission :</strong> Audit des pratiques de développement et pilotage d'une cellule "génie logiciel" dédiée à l'amélioration continue des pratiques (en tant que prestataire).
+      </p>
+      <ul>
+        <li>Audit complet des pratiques de développement</li>
+        <li>Recommandations et plan d'action</li>
+        <li>Création et animation d'une cellule génie logiciel</li>
+        <li>Accompagnement des équipes sur la durée</li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="text-align: center; background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);">
+    <h2>Intéressé ?</h2>
+    <p>Contactez-moi pour discuter de votre projet</p>
+    <p style="margin-top: 24px;">
+      <a class="cta" href="contact.html">Me contacter</a>
+    </p>
+  </section>
+</main>
+
+<footer class="small muted">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 12px;">
+    <img src="../img/logo.png" alt="M87 DEV" style="height: 32px; width: auto;">
+    <span style="font-weight: 600; color: var(--primary);">M87 DEV</span>
+  </div>
+  <p>© <span id="y"></span> M87 DEV — Tous droits réservés.</p>
+  <p style="margin-top: 12px;">
+    <a href="../legal/mentions-legales.html" style="color: var(--primary); margin: 0 8px;">Mentions légales</a> •
+    <a href="../legal/cgv.html" style="color: var(--primary); margin: 0 8px;">CGV</a>
+  </p>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

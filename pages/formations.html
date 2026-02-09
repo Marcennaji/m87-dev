@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Formations — M87 DEV</title>
+  <meta name="description" content="Formations professionnelles en développement logiciel, qualité et architecture." />
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+<header>
+  <nav class="small">
+    <a href="../index.html">Accueil</a>
+    <a href="offres.html">Offres</a>
+    <a href="formations.html">Formations</a>
+    <a href="organisme.html">Organisme</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h1>Formations professionnelles</h1>
+  <p class="muted">Formations pratiques pour développeurs et architectes logiciels</p>
+</header>
+
+<main>
+  <section>
+    <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">
+      Des formations professionnalisantes, concrètes et pragmatiques, basées sur 35 ans d'expérience en développement logiciel.
+    </p>
+  </section>
+
+  <section>
+    <h2>Nos formations</h2>
+
+    <div class="card">
+      <h3>Architecture hexagonale</h3>
+      <p class="muted">1 à 2 jours • Junior à confirmé</p>
+      <p>
+        Formation pratique pour apprendre à concevoir et implémenter une architecture hexagonale, 
+        garantissant maintenabilité, testabilité et évolutivité de vos applications.
+      </p>
+      <ul>
+        <li>Principes fondamentaux et patterns d'architecture</li>
+        <li>Séparation domaine métier / technique</li>
+        <li>Implémentation concrète en C++ ou Python</li>
+        <li>Tests et refactoring d'une application existante</li>
+        <li>Best practices avec les assistants IA</li>
+      </ul>
+      <p style="margin-top: 20px;">
+        <a class="cta" href="../formations/architecture-hexagonale.html">Voir le programme détaillé</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Programmation orientée objet en C++</h3>
+      <p class="muted">2 à 3 jours • Intermédiaire à confirmé</p>
+      <p>
+        Maîtrisez les concepts avancés de la programmation orientée objet en C++ moderne, 
+        avec focus sur la conception robuste et les bonnes pratiques.
+      </p>
+      <ul>
+        <li>Principes SOLID et design patterns</li>
+        <li>Gestion mémoire et RAII</li>
+        <li>Templates et métaprogrammation</li>
+        <li>C++11/14/17/20 : features modernes</li>
+        <li>Tests unitaires et intégration continue</li>
+      </ul>
+      <p style="margin-top: 20px;">
+        <a class="cta" href="contact.html">Demander un devis</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Qualité et architecture logicielle</h3>
+      <p class="muted">1 à 2 jours • Tous niveaux</p>
+      <p>
+        Formation panoramique sur les principes de qualité logicielle, 
+        les patterns d'architecture, et les pratiques d'équipe pour un code maintenable.
+      </p>
+      <ul>
+        <li>Principes de clean code et clean architecture</li>
+        <li>Patterns d'architecture (hexagonale, microservices, event-driven)</li>
+        <li>Tests (unitaires, intégration, TDD)</li>
+        <li>Revues de code et conventions d'équipe</li>
+        <li>Outils d'analyse statique et CI/CD</li>
+      </ul>
+      <p style="margin-top: 20px;">
+        <a class="cta" href="contact.html">Demander un devis</a>
+      </p>
+    </div>
+  </section>
+
+  <section style="background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);">
+    <h2>Pourquoi ces formations ?</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Pragmatique</h3>
+        <p>Exercices concrets sur du code réel, pas de théorie abstraite.</p>
+      </div>
+      <div class="card">
+        <h3>Expérience terrain</h3>
+        <p>35 ans de développement, d'enseignement et d'audit d'architecture.</p>
+      </div>
+      <div class="card">
+        <h3>Outils modernes</h3>
+        <p>Intégration des assistants IA dans les pratiques de développement.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="text-align: center;">
+    <h2>Une question sur nos formations ?</h2>
+    <p>
+      <a class="cta" href="contact.html">Contactez-moi</a>
+    </p>
+  </section>
+</main>
+
+<footer class="small muted">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 12px;">
+    <img src="../img/logo.png" alt="M87 DEV" style="height: 32px; width: auto;">
+    <span style="font-weight: 600; color: var(--primary);">M87 DEV</span>
+  </div>
+  <p>© <span id="y"></span> M87 DEV — Tous droits réservés.</p>
+  <p style="margin-top: 12px;">
+    <a href="../legal/mentions-legales.html" style="color: var(--primary); margin: 0 8px;">Mentions légales</a> •
+    <a href="../legal/cgv.html" style="color: var(--primary); margin: 0 8px;">CGV</a>
+  </p>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

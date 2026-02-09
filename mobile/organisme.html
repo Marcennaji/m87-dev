@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5" />
+  <title>Organisme de formation — M87 DEV</title>
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+
+<body>
+<header>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="offres.html">Offres</a>
+    <a href="formations.html">Formations</a>
+    <a href="organisme.html">Organisme</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h1 style="text-align: center; color: white; margin: 24px 0 8px;">Organisme</h1>
+  <p style="text-align: center; color: rgba(255,255,255,0.9);" class="small">Déclaration & certification</p>
+</header>
+
+<main>
+  <section>
+    <div class="card">
+      <h2 style="margin-top: 0;">Déclaration d'activité</h2>
+      <p class="small">M87 DEV est un organisme de formation professionnelle déclaré auprès de la DREETS Bretagne.</p>
+      <p style="margin-top: 12px;">
+        <strong>Numéro NDA :</strong> En cours<br>
+        <strong>Qualiopi :</strong> En cours
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Modalités</h2>
+    <div class="card">
+      <h3>Tarifs</h3>
+      <ul class="small">
+        <li>Tarifs sur devis</li>
+        <li>OPCO possible</li>
+        <li>Paiement sous 30 jours</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Inscription</h3>
+      <ul class="small">
+        <li>Devis sur demande</li>
+        <li>Signature convention</li>
+        <li>Droit de rétractation 10 jours</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2 style="margin-top: 0;">Accessibilité</h2>
+      <p class="small">Formations accessibles aux personnes en situation de handicap. Aménagements possibles sur demande.</p>
+      <p style="margin-top: 12px;" class="small">
+        Contact : <a href="mailto:m87-dev@pm.me">m87-dev@pm.me</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="text-center">
+    <a href="contact.html" class="cta">Contactez-moi</a>
+  </section>
+</main>
+
+<footer>
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; margin-bottom: 16px;">
+    <img src="../img/logo.png" alt="M87 DEV">
+    <span style="font-weight: 600; color: var(--primary);">M87 DEV</span>
+  </div>
+  <p>© <span id="y"></span> M87 DEV</p>
+  <p style="margin-top: 12px;">
+    <a href="../legal/mentions-legales.html">Mentions légales</a> •
+    <a href="../legal/cgv.html">CGV</a>
+  </p>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

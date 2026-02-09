@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5" />
+  <title>Contact — M87 DEV</title>
+  <meta name="description" content="Contactez M87 DEV pour vos projets de développement, conseil ou formation." />
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+
+<body>
+<header>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="offres.html">Offres</a>
+    <a href="formations.html">Formations</a>
+    <a href="organisme.html">Organisme</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h1 style="text-align: center; color: white; margin: 24px 0 8px;">Contact</h1>
+  <p style="text-align: center; color: rgba(255,255,255,0.9);" class="small">Discutons de votre projet</p>
+</header>
+
+<main>
+  <section>
+    <div class="card">
+      <h2 style="margin-top: 0;">Me contacter</h2>
+      <p>Pour toute demande de devis, question sur une formation ou un projet, n'hésitez pas à me contacter.</p>
+      
+      <div style="margin: 24px 0; padding: 20px; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 8px; text-align: center;">
+        <p style="font-size: 16px; font-weight: 600; color: var(--primary); margin-bottom: 8px;">Email</p>
+        <p style="font-size: 20px; font-weight: 700; color: var(--text);">
+          <a href="mailto:m87-dev@pm.me" style="color: var(--primary); text-decoration: none;">
+            m87-dev@pm.me
+          </a>
+        </p>
+      </div>
+
+      <p class="muted small text-center">Je réponds généralement sous 24 à 48 heures.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Informations légales</h2>
+    <div class="card">
+      <p><strong>M87 DEV</strong></p>
+      <p style="margin-top: 12px;">
+        SASU au capital de 1 000 €<br>
+        SIREN : 929 528 503<br>
+        RCS Saint-Brieuc 929 528 503
+      </p>
+      <p style="margin-top: 16px;">
+        <strong>Organisme de formation déclaré</strong><br>
+        Numéro de déclaration d'activité : En cours
+      </p>
+      <p style="margin-top: 16px;" class="small">
+        <a href="../legal/mentions-legales.html">Mentions légales</a> •
+        <a href="../legal/cgv.html">CGV</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="text-center">
+    <h2>LinkedIn</h2>
+    <a href="https://www.linkedin.com/in/marcennaji/" target="_blank" rel="noopener" class="cta">
+      Voir le profil LinkedIn
+    </a>
+  </section>
+</main>
+
+<footer>
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; margin-bottom: 16px;">
+    <img src="../img/logo.png" alt="M87 DEV">
+    <span style="font-weight: 600; color: var(--primary);">M87 DEV</span>
+  </div>
+  <p>© <span id="y"></span> M87 DEV</p>
+  <p style="margin-top: 12px;">
+    <a href="../legal/mentions-legales.html">Mentions légales</a> •
+    <a href="../legal/cgv.html">CGV</a>
+  </p>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
