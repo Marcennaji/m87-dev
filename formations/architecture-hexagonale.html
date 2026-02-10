@@ -10,16 +10,47 @@
 
 <body>
 <header>
-  <nav class="small">
-    <a href="../index.html">Accueil</a>
-    <a href="../pages/offres.html">Offres</a>
-    <a href="../pages/formations.html">Formations</a>
-    <a href="../pages/organisme.html">Organisme</a>
-    <a href="../pages/a-propos.html">À propos</a>
-    <a href="../pages/contact.html">Contact</a>
+  <div style="display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; position: relative;">
+    <div style="flex-shrink: 0;">
+      <a href="../index.html">
+        <img src="../img/logo_transparent.png" alt="M87 DEV" style="height: 60px; width: auto;">
+      </a>
+    </div>
+    <nav class="desktop-nav" style="display: flex; gap: 24px; align-items: center;">
+      <a href="../index.html">Accueil</a>
+      <a href="../pages/offres.html">Offres</a>
+      <a href="../pages/formations.html">Formations</a>
+      <a href="../pages/organisme.html">Organisme de formation</a>
+      <a href="../pages/a-propos.html">À propos</a>
+      <a href="../pages/contact.html">Contact</a>
+    </nav>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="../index.html" onclick="toggleMobileMenu()">Accueil</a>
+    <a href="../pages/offres.html" onclick="toggleMobileMenu()">Offres</a>
+    <a href="../pages/formations.html" onclick="toggleMobileMenu()">Formations</a>
+    <a href="../pages/organisme.html" onclick="toggleMobileMenu()">Organisme de formation</a>
+    <a href="../pages/a-propos.html" onclick="toggleMobileMenu()">À propos</a>
+    <a href="../pages/contact.html" onclick="toggleMobileMenu()">Contact</a>
   </nav>
+</header>
 
-  <div style="text-align: center; margin-top: 24px;">
+<script>
+function toggleMobileMenu() {
+  const nav = document.getElementById('mobileNav');
+  const btn = document.querySelector('.mobile-menu-btn');
+  nav.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+</script>
+
+<main>
+  <section style="text-align: center; padding: 40px 24px; background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%); border-radius: 16px; margin-bottom: 32px;">
     <h1>Formation Architecture Hexagonale Appliquée</h1>
     <p class="muted" style="font-size: 18px;">Conception de logiciels testables, maintenables et évolutifs</p>
     <p style="margin-top: 20px;">
@@ -28,10 +59,7 @@
       <span class="tag">Python / C++</span>
       <span class="tag">1-2 jours</span>
     </p>
-  </div>
-</header>
-
-<main>
+  </section>
   <section>
     <h2>Le problème</h2>
     <div class="grid">

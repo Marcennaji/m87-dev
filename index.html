@@ -10,34 +10,54 @@
 
 <body>
 <header>
-  <nav class="small">
-    <a href="index.html">Accueil</a>
-    <a href="pages/offres.html">Offres</a>
-    <a href="pages/formations.html">Formations</a>
-    <a href="pages/organisme.html">Organisme de formation</a>
-    <a href="pages/a-propos.html">À propos</a>
-    <a href="pages/contact.html">Contact</a>
-  </nav>
-
-  <!-- Logo et tags sur la même ligne -->
-  <div style="display: flex; align-items: center; justify-content: center; gap: 50px; margin: 24px 0 20px; flex-wrap: wrap;">
+  <div style="display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; position: relative;">
+    <!-- Logo à gauche -->
     <div style="flex-shrink: 0;">
-      <img src="img/logo_transparent.png" alt="M87 DEV - Ingénierie logicielle, Développement, Conseil, Formation" style="height: 200px; width: auto;">
+      <a href="index.html">
+        <img src="img/logo_transparent.png" alt="M87 DEV" style="height: 60px; width: auto;">
+      </a>
     </div>
-    <div style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 600px; justify-content: center;">
-      <span class="tag" style="font-size: 12px; padding: 4px 10px;">C++ (OOP, moderne)</span>
-      <span class="tag" style="font-size: 12px; padding: 4px 10px;">Python</span>
-      <span class="tag" style="font-size: 12px; padding: 4px 10px;">Architecture hexagonale</span>
-      <span class="tag" style="font-size: 12px; padding: 4px 10px;">Clean Architecture</span>
-      <span class="tag" style="font-size: 12px; padding: 4px 10px;">Design patterns</span>
-      <span class="tag" style="font-size: 12px; padding: 4px 10px;">Revue de code</span>
-      <span class="tag" style="font-size: 12px; padding: 4px 10px;">Assistants IA (bonnes pratiques)</span>
-    </div>
+    
+    <!-- Navigation Desktop (cachée sur mobile) -->
+    <nav class="desktop-nav" style="display: flex; gap: 24px; align-items: center;">
+      <a href="index.html">Accueil</a>
+      <a href="pages/offres.html">Offres</a>
+      <a href="pages/formations.html">Formations</a>
+      <a href="pages/organisme.html">Organisme de formation</a>
+      <a href="pages/a-propos.html">À propos</a>
+      <a href="pages/contact.html">Contact</a>
+    </nav>
+
+    <!-- Bouton Menu Mobile (visible uniquement sur mobile) -->
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
+
+  <!-- Menu Mobile (visible uniquement sur mobile, ouvert au clic) -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html" onclick="toggleMobileMenu()">Accueil</a>
+    <a href="pages/offres.html" onclick="toggleMobileMenu()">Offres</a>
+    <a href="pages/formations.html" onclick="toggleMobileMenu()">Formations</a>
+    <a href="pages/organisme.html" onclick="toggleMobileMenu()">Organisme de formation</a>
+    <a href="pages/a-propos.html" onclick="toggleMobileMenu()">À propos</a>
+    <a href="pages/contact.html" onclick="toggleMobileMenu()">Contact</a>
+  </nav>
 </header>
 
+<script>
+function toggleMobileMenu() {
+  const nav = document.getElementById('mobileNav');
+  const btn = document.querySelector('.mobile-menu-btn');
+  nav.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+</script>
+
 <main>
-  <section style="text-align: center; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f0f9ff 100%); padding: 40px 24px; border-radius: 16px; box-shadow: 0 2px 12px rgba(37,99,235,0.1);">
+  <section style="text-align: center; background: linear-gradient(135deg, #ecfeff 0%, #cffafe 50%, #ecfeff 100%); padding: 40px 24px; border-radius: 16px; box-shadow: 0 2px 12px rgba(6, 182, 212, 0.15);">
     <h1>Ingénierie logicielle & Formation professionnelle</h1>
     <p class="muted" style="font-size: 18px; max-width: 700px; margin: 20px auto;">
       <strong>M87 DEV</strong> accompagne les professionnels et les entreprises dans leurs projets de développement logiciel et propose des formations en architecture logicielle, C++ et bonnes pratiques.
@@ -48,7 +68,7 @@
     </div>
   </section>
 
-  <section style="background: linear-gradient(135deg, #ffffff 0%, #fef3f2 100%); border-left: 4px solid var(--accent);">
+  <section style="background: linear-gradient(135deg, #ffffff 0%, #f0fdfa 100%); border-left: 4px solid var(--accent);">
     <h2>Services</h2>
     <div class="grid">
       <div class="card">
@@ -77,7 +97,7 @@
     </div>
   </section>
 
-  <section style="background: linear-gradient(135deg, #fef3f2 0%, #fff7ed 100%); border-left: 4px solid var(--success); padding: 40px 24px; border-radius: 16px;">
+  <section style="background: linear-gradient(135deg, #f0fdf4 0%, #d1fae5 100%); border-left: 4px solid var(--success); padding: 40px 24px; border-radius: 16px;">
     <h2>Formations professionnelles</h2>
     <p>Formations professionnalisantes à destination de professionnels et particuliers.</p>
     
@@ -109,7 +129,7 @@
     </p>
   </section>
 
-  <section style="text-align: center; background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 50%, #f0f9ff 100%); padding: 40px 24px; border-radius: 16px; box-shadow: 0 2px 12px rgba(37,99,235,0.15);">
+  <section style="text-align: center; background: linear-gradient(135deg, #cffafe 0%, #a5f3fc 50%, #cffafe 100%); padding: 40px 24px; border-radius: 16px; box-shadow: 0 2px 12px rgba(6, 182, 212, 0.2);">
     <h2>Informations pratiques</h2>
     <div class="grid">
       <div>
