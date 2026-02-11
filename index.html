@@ -54,6 +54,29 @@ function toggleMobileMenu() {
   nav.classList.toggle('open');
   btn.classList.toggle('open');
 }
+
+// Protection anti-spam de l'email
+function decodeEmail() {
+  const user = 'm87-dev';
+  const domain = 'pm.me';
+  return user + '@' + domain;
+}
+
+function initEmailLinks() {
+  document.querySelectorAll('.email-link').forEach(link => {
+    const email = decodeEmail();
+    link.href = 'mailto:' + email;
+    if (link.classList.contains('email-text')) {
+      link.textContent = email;
+    }
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initEmailLinks);
+} else {
+  initEmailLinks();
+}
 </script>
 
 <main>
@@ -135,7 +158,7 @@ function toggleMobileMenu() {
       </div>
       <div>
         <h3>Contact</h3>
-        <p>Email : <a href="mailto:m87-dev@pm.me">m87-dev@pm.me</a><br>Délai de réponse : sous 48h</p>
+        <p>Email : <a href="#" class="email-link email-text" style="color: var(--primary);">m87-dev[at]pm.me</a><br>Délai de réponse : sous 48h</p>
         <p><a href="pages/contact.html" style="color: var(--primary); font-weight: 500;">Formulaire de contact →</a></p>
       </div>
     </div>

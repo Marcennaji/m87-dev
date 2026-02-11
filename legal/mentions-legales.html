@@ -30,7 +30,7 @@
       <p><strong>SIREN :</strong> 929 528 503</p>
       <p><strong>RCS :</strong> Saint-Brieuc 929 528 503</p>
       <p><strong>Siège social :</strong> France</p>
-      <p><strong>Email :</strong> <a href="mailto:m87-dev@pm.me">m87-dev@pm.me</a></p>
+      <p><strong>Email :</strong> <a href="#" class="email-link email-text">m87-dev[at]pm.me</a></p>
     </div>
   </section>
 
@@ -103,7 +103,7 @@
         <li>Droit de limitation du traitement</li>
       </ul>
       <p style="margin-top: 16px;">
-        Pour exercer ces droits, contactez : <a href="mailto:m87-dev@pm.me">m87-dev@pm.me</a>
+        Pour exercer ces droits, contactez : <a href="#" class="email-link email-text">m87-dev[at]pm.me</a>
       </p>
     </div>
   </section>
@@ -180,6 +180,30 @@
 
 <script>
   document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+<script>
+// Protection anti-spam de l'email
+function decodeEmail() {
+  const user = 'm87-dev';
+  const domain = 'pm.me';
+  return user + '@' + domain;
+}
+
+function initEmailLinks() {
+  document.querySelectorAll('.email-link').forEach(link => {
+    const email = decodeEmail();
+    link.href = 'mailto:' + email;
+    if (link.classList.contains('email-text')) {
+      link.textContent = email;
+    }
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initEmailLinks);
+} else {
+  initEmailLinks();
+}
 </script>
 </body>
 </html>

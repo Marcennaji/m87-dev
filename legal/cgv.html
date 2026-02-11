@@ -119,7 +119,7 @@
     <h2>5. Annulation et report</h2>
     <div class="card">
       <h3>5.1. Annulation par le client</h3>
-      <p>Toute annulation doit être notifiée par email à : <a href="mailto:m87-dev@pm.me">m87-dev@pm.me</a></p>
+      <p>Toute annulation doit être notifiée par email à : <a href="#" class="email-link email-text">m87-dev[at]pm.me</a></p>
       <ul>
         <li><strong>Plus de 30 jours avant le début :</strong> remboursement intégral</li>
         <li><strong>Entre 30 et 15 jours avant :</strong> retenue de 50% du montant</li>
@@ -217,7 +217,7 @@
         <li>Droit d'opposition au traitement</li>
       </ul>
       <p>
-        Pour exercer ces droits, contactez : <a href="mailto:m87-dev@pm.me">m87-dev@pm.me</a>
+        Pour exercer ces droits, contactez : <a href="#" class="email-link email-text">m87-dev[at]pm.me</a>
       </p>
       <p class="small muted">
         Conformément au Règlement Général sur la Protection des Données (RGPD), les données sont conservées 
@@ -232,7 +232,7 @@
       <h3>10.1. Réclamation</h3>
       <p>
         Toute réclamation relative à la formation doit être adressée par email à : 
-        <a href="mailto:m87-dev@pm.me">m87-dev@pm.me</a>
+        <a href="#" class="email-link email-text">m87-dev[at]pm.me</a>
       </p>
       <p>
         <strong>Délai de réponse :</strong> 15 jours ouvrés maximum.
@@ -284,7 +284,7 @@
       <p>
         <strong>Référent handicap :</strong> Pour toute situation nécessitant une adaptation 
         (supports, rythme, locaux...), contactez-nous au moins 15 jours avant le début de la formation : 
-        <a href="mailto:m87-dev@pm.me">m87-dev@pm.me</a>
+        <a href="#" class="email-link email-text">m87-dev[at]pm.me</a>
       </p>
     </div>
   </section>
@@ -298,14 +298,14 @@
       <p><strong>Déclaration d'activité :</strong> En cours d'obtention (NDA)</p>
       <p><strong>Certification Qualiopi :</strong> En cours</p>
       <p><strong>Siège social :</strong> France</p>
-      <p><strong>Contact :</strong> <a href="mailto:m87-dev@pm.me">m87-dev@pm.me</a></p>
+      <p><strong>Contact :</strong> <a href="#" class="email-link email-text">m87-dev[at]pm.me</a></p>
     </div>
   </section>
 
   <div class="card highlight" style="text-align: center; margin-top: 40px;">
     <p>
       <strong>Des questions sur nos CGV ?</strong><br>
-      Contactez-nous : <a href="mailto:m87-dev@pm.me">m87-dev@pm.me</a>
+      Contactez-nous : <a href="#" class="email-link email-text">m87-dev[at]pm.me</a>
     </p>
     <p style="margin-top: 20px;">
       <a href="../pages/contact.html" style="color: #2563eb; text-decoration: none; font-weight: 500;">
@@ -329,6 +329,30 @@
 
 <script>
   document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+<script>
+// Protection anti-spam de l'email
+function decodeEmail() {
+  const user = 'm87-dev';
+  const domain = 'pm.me';
+  return user + '@' + domain;
+}
+
+function initEmailLinks() {
+  document.querySelectorAll('.email-link').forEach(link => {
+    const email = decodeEmail();
+    link.href = 'mailto:' + email;
+    if (link.classList.contains('email-text')) {
+      link.textContent = email;
+    }
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initEmailLinks);
+} else {
+  initEmailLinks();
+}
 </script>
 </body>
 </html>

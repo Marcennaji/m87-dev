@@ -67,8 +67,8 @@ function toggleMobileMenu() {
           Email
         </p>
         <p style="font-size: 24px; font-weight: 700; color: var(--text);">
-          <a href="mailto:m87-dev@pm.me" style="color: var(--primary); text-decoration: none;">
-            m87-dev@pm.me
+          <a href="#" class="email-link email-text" style="color: var(--primary); text-decoration: none;">
+            m87-dev[at]pm.me
           </a>
         </p>
       </div>
@@ -87,10 +87,6 @@ function toggleMobileMenu() {
         SASU au capital de 1 000 €<br>
         SIREN : 929 528 503<br>
         RCS Saint-Brieuc 929 528 503
-      </p>
-      <p style="margin-top: 16px;">
-        <strong>Organisme de formation déclaré</strong><br>
-        Numéro de déclaration d'activité : En cours d'obtention
       </p>
       <p style="margin-top: 16px; font-size: 14px;" class="muted">
         <a href="../legal/mentions-legales.html" style="color: var(--primary);">Mentions légales</a> •
@@ -126,6 +122,30 @@ function toggleMobileMenu() {
 
 <script>
   document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+<script>
+// Protection anti-spam de l'email
+function decodeEmail() {
+  const user = 'm87-dev';
+  const domain = 'pm.me';
+  return user + '@' + domain;
+}
+
+function initEmailLinks() {
+  document.querySelectorAll('.email-link').forEach(link => {
+    const email = decodeEmail();
+    link.href = 'mailto:' + email;
+    if (link.classList.contains('email-text')) {
+      link.textContent = email;
+    }
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initEmailLinks);
+} else {
+  initEmailLinks();
+}
 </script>
 </body>
 </html>
