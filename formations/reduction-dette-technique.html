@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Formation Réduction de Dette Technique & Refactoring Maîtrisé — M87 DEV</title>
+  <meta name="description" content="Formation professionnelle pour identifier, prioriser et résorber la dette technique. Refactoring progressif, SOLID pragmatique, tests de sécurisation. Python ou C++." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+<header>
+  <div style="display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; position: relative;">
+    <div style="flex-shrink: 0;">
+      <a href="../index.html">
+        <img src="../img/logo_transparent.png" alt="M87 DEV" style="height: 120px; width: auto;">
+      </a>
+    </div>
+    <nav class="desktop-nav">
+      <a href="../index.html">Accueil</a>
+      <a href="../pages/offres.html">Offres</a>
+      <a href="../pages/formations.html">Catalogue</a>
+      <a href="../pages/organisme.html">Modalités</a>
+      <a href="../pages/a-propos.html">À propos</a>
+      <a href="../pages/contact.html">Contact</a>
+    </nav>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="../index.html" onclick="toggleMobileMenu()">Accueil</a>
+    <a href="../pages/offres.html" onclick="toggleMobileMenu()">Offres</a>
+    <a href="../pages/formations.html" onclick="toggleMobileMenu()">Catalogue</a>
+    <a href="../pages/organisme.html" onclick="toggleMobileMenu()">Modalités</a>
+    <a href="../pages/a-propos.html" onclick="toggleMobileMenu()">À propos</a>
+    <a href="../pages/contact.html" onclick="toggleMobileMenu()">Contact</a>
+  </nav>
+</header>
+
+<script>
+function toggleMobileMenu() {
+  const nav = document.getElementById('mobileNav');
+  const btn = document.querySelector('.mobile-menu-btn');
+  nav.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+
+// Protection anti-spam de l'email
+function decodeEmail() {
+  const user = 'm87-dev';
+  const domain = 'pm.me';
+  return user + '@' + domain;
+}
+
+function initEmailLinks() {
+  document.querySelectorAll('.email-link').forEach(link => {
+    const email = decodeEmail();
+    link.href = 'mailto:' + email;
+    if (link.classList.contains('email-text')) {
+      link.textContent = email;
+    }
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initEmailLinks);
+} else {
+  initEmailLinks();
+}
+</script>
+
+<main>
+  <section style="text-align: center; padding: 40px 24px; background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%); border-radius: 16px; margin-bottom: 32px;">
+    <h1>Réduction de dette technique & refactoring maîtrisé</h1>
+    <p class="muted" style="font-size: 18px;">Identifier, prioriser, résorber — sans paralyser l'équipe ni prendre de risques inutiles</p>
+    <p style="margin-top: 20px;">
+      <span class="tag">Dette technique</span>
+      <span class="tag">Refactoring</span>
+      <span class="tag">SOLID</span>
+      <span class="tag">Python / C++</span>
+      <span class="tag">1-2 jours</span>
+    </p>
+  </section>
+
+  <section>
+    <h2>Les problèmes que rencontrent beaucoup d'équipes</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Dette invisible ou mal évaluée</h3>
+        <p>On ressent que "le code est dur à faire évoluer", mais on n'arrive pas à objectiver ni prioriser ce qui pose vraiment problème.</p>
+      </div>
+      <div class="card">
+        <h3>Refactoring risqué ou interminable</h3>
+        <p>Les tentatives de nettoyage dégénèrent en effet tunnel, ou introduisent des régressions. On préfère ne pas toucher au code existant.</p>
+      </div>
+      <div class="card">
+        <h3>La dette se recrée en permanence</h3>
+        <p>Même quand on corrige, de nouvelles mauvaises pratiques s'introduisent. Sans méthode partagée, le problème revient.</p>
+      </div>
+      <div class="card">
+        <h3>Tests absents ou insuffisants</h3>
+        <p>Impossible de refactorer en confiance sans filet de sécurité. Pourtant écrire les tests a posteriori semble coûteux et sans fin.</p>
+      </div>
+    </div>
+
+    <div class="card highlight" style="margin-top: 32px;">
+      <p>
+        <strong>La dette technique n'est pas une fatalité, mais elle ne se réduit pas par la bonne volonté seule.</strong><br>
+        Il faut une méthode : savoir quoi traiter en priorité, comment refactorer progressivement, et comment éviter d'en recréer.
+      </p>
+    </div>
+  </section>
+
+  <section style="background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);">
+    <h2>Objectifs de la formation</h2>
+    <div class="card">
+      <p><strong>À l'issue de la formation, vous serez capable de :</strong></p>
+      <ul>
+        <li>Identifier et classifier la dette technique de votre projet</li>
+        <li>Distinguer la dette bloquante de celle qui peut attendre</li>
+        <li>Refactorer du code existant de façon progressive et sécurisée</li>
+        <li>Sécuriser un refactoring par des tests adaptés (même sur du code legacy)</li>
+        <li>Appliquer les principes SOLID de manière pragmatique, sans dogmatisme</li>
+        <li>Écrire du code maintenable qui ne recréée pas de dette</li>
+        <li>Mettre en place des garde-fous durables dans l'équipe</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>À qui s'adresse cette formation ?</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Public visé</h3>
+        <ul>
+          <li>Développeurs ayant déjà une expérience projet</li>
+          <li>Tech leads</li>
+          <li>Ingénieurs qualité logicielle</li>
+          <li>Équipes produit confrontées à un ralentissement des livraisons</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Prérequis</h3>
+        <ul>
+          <li>Connaissances en Python ou C++</li>
+          <li>Bases de programmation orientée objet</li>
+          <li>Expérience d'un projet de développement en production</li>
+          <li>Ordinateur portable pour les exercices</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);">
+    <h2>Programme détaillé</h2>
+    <p class="muted small" style="text-align: center; margin-bottom: 32px;">
+      Format 1 jour (fondamentaux) ou 2 jours (approfondissement sur exemples réels)<br>
+      Exemples en Python ou C++
+    </p>
+
+    <div class="card highlight">
+      <h3>Jour 1 — Diagnostiquer et refactorer avec méthode</h3>
+      <p class="small muted">
+        Objectif : acquérir les outils de diagnostic et les techniques de refactoring sécurisé.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Module 1 : Comprendre la dette technique</h3>
+      <ul>
+        <li>Qu'est-ce que la dette technique (et ce qu'elle n'est pas)</li>
+        <li>Sources de dette : accidentelle, délibérée, liée à l'évolution du métier</li>
+        <li>Comment la mesurer et l'objectiver concrètement</li>
+        <li>Priorisation : dette bloquante vs dette acceptable</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Module 2 : Sécuriser le refactoring par les tests</h3>
+      <ul>
+        <li>Pourquoi le refactoring sans tests est risqué</li>
+        <li>Tests de caractérisation : capturer le comportement existant avant de toucher au code</li>
+        <li>Tests unitaires et tests d'intégration au bon niveau</li>
+        <li>Ajouter des tests sur du code legacy sans le réécrire entièrement</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Module 3 : Refactoring progressif et sécurisé</h3>
+      <ul>
+        <li>Règles de base : une transformation à la fois, vérification continue</li>
+        <li>Techniques classiques : extract method, rename, move, encapsulate</li>
+        <li>Stratégie des petits pas : avancer sans effet tunnel</li>
+        <li>Exercice guidé sur un exemple de code réel</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Module 4 : SOLID appliqué pragmatiquement</h3>
+      <ul>
+        <li>Les 5 principes SOLID : sens concret, pas définitions abstraites</li>
+        <li>Quand les appliquer — et quand ne pas les appliquer</li>
+        <li>Reconnaître les violations SOLID dans du code existant</li>
+        <li>Corriger une violation sans tout réécrire</li>
+      </ul>
+    </div>
+
+    <div class="card highlight" style="margin-top: 32px;">
+      <h3>Jour 2 — Prévenir la recréation de dette (option approfondissement)</h3>
+      <p class="small muted">
+        Objectif : ancrer les bonnes pratiques dans les habitudes de l'équipe pour éviter de recréer de la dette.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Module 5 : Clean code pragmatique</h3>
+      <ul>
+        <li>Nommage, lisibilité, complexité : ce qui compte vraiment</li>
+        <li>Commentaires utiles vs commentaires inutiles</li>
+        <li>Fonctions et classes bien dimensionnées</li>
+        <li>Distinguer "code propre" et "code sur-engineeré"</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Module 6 : Éviter de recréer de la dette</h3>
+      <ul>
+        <li>Patterns et anti-patterns courants dans les équipes</li>
+        <li>Code review orientée qualité : quoi regarder, comment donner du feedback</li>
+        <li>Conventions d'équipe simples et tenables dans la durée</li>
+        <li>Utiliser les assistants IA (Copilot, ChatGPT) sans amplifier la dette</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Module 7 : Stratégies sur un projet réel</h3>
+      <ul>
+        <li>Analyse d'un extrait de votre code ou d'un cas représentatif</li>
+        <li>Élaboration d'un plan de réduction de dette priorisé</li>
+        <li>Arbitrage coût/bénéfice : quoi traiter maintenant, quoi différer</li>
+        <li>Plan d'action post-formation</li>
+      </ul>
+    </div>
+
+    <div class="card highlight">
+      <h3>Livrables inclus</h3>
+      <ul>
+        <li>Support de formation complet (PDF)</li>
+        <li>Code source des exemples (Python ou C++)</li>
+        <li>Exercices et corrections</li>
+        <li>Grille de diagnostic de dette technique</li>
+        <li>Checklist de refactoring progressif</li>
+        <li>Attestation de formation</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Pourquoi cette formation est différente</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Pragmatique, pas dogmatique</h3>
+        <p>SOLID et clean code sont enseignés avec discernement. L'objectif est un code maintenable, pas un code "parfait".</p>
+      </div>
+      <div class="card">
+        <h3>Exemples de l'industrie</h3>
+        <p>Cas concrets tirés de 35 ans d'expérience. Les problèmes présentés sont des problèmes réels, pas des cas d'école.</p>
+      </div>
+      <div class="card">
+        <h3>Adaptation à votre contexte</h3>
+        <p>Possibilité de travailler sur des extraits de votre propre code lors du 2ème jour.</p>
+      </div>
+      <div class="card">
+        <h3>Méthode, pas recette</h3>
+        <p>On ne cherche pas à tout nettoyer d'un coup. On apprend à décider quoi traiter, comment, et dans quel ordre.</p>
+      </div>
+    </div>
+
+    <div class="card highlight" style="margin-top: 32px;">
+      <p>
+        <strong>L'objectif n'est pas un code irréprochable, mais une équipe capable d'avancer sans s'enliser.</strong><br>
+        Vous repartez avec une méthode applicable dès la semaine suivante.
+      </p>
+    </div>
+  </section>
+
+  <section style="background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);">
+    <h2>Formation complémentaire</h2>
+    <div class="card">
+      <p>
+        Cette formation se concentre sur le refactoring et la réduction de dette dans votre code existant.
+        Si votre équipe souhaite également structurer ses <strong>nouvelles fonctionnalités</strong> de façon robuste et testable,
+        la formation <a href="architecture-hexagonale.html" style="color: var(--primary);">Architecture hexagonale appliquée</a>
+        constitue un complément naturel.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>À propos du formateur</h2>
+    <div class="card">
+      <p>
+        <strong>Marc Ennaji</strong> — Ingénieur logiciel avec 35 ans d'expérience en développement,
+        architecture et conseil. Enseignant vacataire en architecture logicielle.
+      </p>
+      <p style="margin-top: 16px;">
+        Spécialisé en C++ et Python, passionné par la qualité logicielle et les architectures robustes.
+      </p>
+      <p style="margin-top: 20px;">
+        <a href="../pages/a-propos.html" class="cta">En savoir plus</a>
+      </p>
+    </div>
+  </section>
+
+  <section style="background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);">
+    <h2>Modalités pratiques</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Durée</h3>
+        <p>Format fondamentaux : 1 jour</p>
+        <p>Format approfondissement : 2 jours (inclut travail sur votre code réel)</p>
+      </div>
+      <div class="card">
+        <h3>Format</h3>
+        <p>Présentiel ou distanciel (visioconférence)</p>
+      </div>
+      <div class="card">
+        <h3>Participants</h3>
+        <p>4 à 8 personnes maximum (inter-entreprises ou intra-entreprise)</p>
+      </div>
+      <div class="card">
+        <h3>Méthodes</h3>
+        <p>Alternance théorie/pratique, exercices de refactoring, études de cas, discussions d'équipe</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Tarifs</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Intra-entreprise</h3>
+        <p><strong>Sur devis</strong></p>
+        <p class="small muted" style="margin-top: 12px;">
+          Tarif adapté à la durée, au nombre de participants et aux modalités.
+          Formation dans vos locaux ou à distance.
+        </p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 24px;">
+      <h3>Financement</h3>
+      <p>
+        M87 DEV est un organisme de formation en cours de démarche de certification Qualiopi.
+        À ce stade, la formation ne permet <strong>pas</strong> de bénéficier d'une prise en charge via le CPF ou les OPCO.
+      </p>
+      <p style="margin-top: 12px;">
+        Les entreprises peuvent néanmoins mobiliser leur <strong>budget formation interne</strong> (plan de développement des compétences).
+      </p>
+      <p class="small muted" style="margin-top: 12px;">
+        <a href="../pages/organisme.html" style="color: var(--primary);">En savoir plus sur l'organisme</a>
+      </p>
+    </div>
+  </section>
+
+  <section style="background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);">
+    <h2>Accessibilité</h2>
+    <div class="card">
+      <p>
+        Cette formation est accessible aux personnes en situation de handicap.
+        Des aménagements peuvent être mis en place selon les besoins.
+      </p>
+      <p style="margin-top: 16px;">
+        Pour toute demande d'adaptation, merci de nous contacter en amont :
+        <a href="#" class="email-link email-text" style="color: var(--primary);">m87-dev[at]pm.me</a>
+      </p>
+    </div>
+  </section>
+
+  <section style="text-align: center;">
+    <h2>Intéressé par cette formation ?</h2>
+    <p>Demandez un devis personnalisé</p>
+    <p style="margin-top: 24px;">
+      <a class="cta" href="../pages/contact.html">Demander un devis</a>
+    </p>
+    <p style="margin-top: 16px; font-size: 14px;" class="muted">
+      <a href="../legal/cgv.html" style="color: var(--primary);">Voir les conditions générales de vente</a>
+    </p>
+  </section>
+</main>
+
+<footer class="small muted">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 12px;">
+    <img src="../img/logo.png" alt="M87 DEV" style="height: 32px; width: auto;">
+    <span style="font-weight: 600; color: var(--primary);">M87 DEV</span>
+  </div>
+  <p>© <span id="y"></span> M87 DEV — Tous droits réservés.</p>
+  <p style="margin-top: 12px;">
+    <a href="../legal/mentions-legales.html" style="color: var(--primary); margin: 0 8px;">Mentions légales</a> •
+    <a href="../legal/cgv.html" style="color: var(--primary); margin: 0 8px;">CGV</a>
+  </p>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
