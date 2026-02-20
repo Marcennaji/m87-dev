@@ -137,20 +137,29 @@ if (document.readyState === 'loading') {
     </div>
   </section>
 
-  <section>
-    <h2>Objectifs de la formation</h2>
-    <div class="card">
-      <p><strong>À l'issue de la formation, vous serez capable de :</strong></p>
-      <ul>
-        <li>Concevoir une architecture hexagonale complète</li>
-        <li>Séparer clairement le domaine métier des détails techniques</li>
-        <li>Définir ports (interfaces) et adaptateurs (implémentations)</li>
-        <li>Rendre votre code 100% testable sans infrastructure</li>
-        <li>Refactorer une application existante vers cette architecture</li>
-        <li>Utiliser efficacement les assistants IA avec une architecture solide</li>
-      </ul>
-    </div>
-  </section>
+<section>
+  <h2>Objectifs de la formation</h2>
+  <div class="card">
+    <p><strong>À l'issue du format standard (2 jours), vous serez capable de :</strong></p>
+    <ul>
+      <li>Comprendre les principes fondamentaux de l’architecture hexagonale</li>
+      <li>Séparer clairement le domaine métier des détails techniques</li>
+      <li>Définir ports (interfaces) et adaptateurs (implémentations)</li>
+      <li>Concevoir une application testable sans dépendance à l’infrastructure</li>
+      <li>Mettre en œuvre une architecture hexagonale sur un cas concret</li>
+      <li>Identifier les principales violations architecturales dans un projet existant</li>
+    </ul>
+
+    <p style="margin-top: 20px;"><strong>Avec l’option approfondissement (3ᵉ jour), vous saurez également :</strong></p>
+    <ul>
+      <li>Refactorer progressivement une application vers une architecture hexagonale</li>
+      <li>Définir une stratégie de migration réaliste pour un projet en production</li>
+      <li>Limiter l’augmentation de la dette technique lors des évolutions</li>
+      <li>Utiliser efficacement les assistants IA dans un cadre architectural maîtrisé</li>
+    </ul>
+  </div>
+</section>
+
 
   <section style="background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);">
     <h2>À qui s'adresse cette formation ?</h2>
@@ -175,77 +184,99 @@ if (document.readyState === 'loading') {
     </div>
   </section>
 
-  <section>
-    <h2>Programme détaillé</h2>
-    <p class="muted small" style="text-align: center; margin-bottom: 32px;">Adapté à vos besoins : exemples en Python ou C++</p>
+<section>
+  <h2>Programme détaillé</h2>
+  <p class="muted small" style="text-align: center; margin-bottom: 32px;">
+    Format standard : 2 jours — Option approfondissement : +1 jour<br>
+    Exemples en Python ou C++
+  </p>
 
-    <div class="card">
-      <h3>Module 1 : Les fondations</h3>
-      <ul>
-        <li>Principes d'architecture : couplage, cohésion, inversion de dépendances</li>
-        <li>Problèmes des architectures classiques (layered, MVC)</li>
-        <li>Introduction à l'architecture hexagonale</li>
-        <li>Vocabulaire : domaine, ports primaires, ports secondaires, adaptateurs</li>
-      </ul>
-    </div>
+  <div class="card highlight">
+    <h3>Format standard – 2 jours</h3>
+    <p class="small muted">
+      Objectif : maîtriser les principes de l’architecture hexagonale et savoir les appliquer sur un cas concret.
+    </p>
+  </div>
 
-    <div class="card">
-      <h3>Module 2 : Structure et conception</h3>
-      <ul>
-        <li>Organisation des dossiers et modules</li>
-        <li>Le noyau métier : entités, value objects, agrégats</li>
-        <li>Définition des ports (interfaces)</li>
-        <li>Use cases et services applicatifs</li>
-        <li>Règles de dépendance</li>
-      </ul>
-    </div>
+  <div class="card">
+    <h3>Module 1 : Les fondations</h3>
+    <ul>
+      <li>Principes d'architecture : couplage, cohésion, inversion de dépendances</li>
+      <li>Limites des architectures classiques (layered, MVC)</li>
+      <li>Introduction à l'architecture hexagonale</li>
+      <li>Vocabulaire : domaine, ports primaires, ports secondaires, adaptateurs</li>
+    </ul>
+  </div>
 
-    <div class="card">
-      <h3>Module 3 : Implémentation pratique</h3>
-      <ul>
-        <li>Création du domaine métier pur</li>
-        <li>Ports primaires (API, CLI, interface utilisateur)</li>
-        <li>Ports secondaires (base de données, API externes, fichiers)</li>
-        <li>Injection de dépendances</li>
-        <li>Configuration et bootstrap de l'application</li>
-      </ul>
-    </div>
+  <div class="card">
+    <h3>Module 2 : Structure et conception</h3>
+    <ul>
+      <li>Organisation des dossiers et modules</li>
+      <li>Noyau métier : entités et value objects</li>
+      <li>Définition des ports (interfaces)</li>
+      <li>Use cases et services applicatifs</li>
+      <li>Règles de dépendance</li>
+    </ul>
+  </div>
 
-    <div class="card">
-      <h3>Module 4 : Tests et qualité</h3>
-      <ul>
-        <li>Tests unitaires du domaine (sans infrastructure)</li>
-        <li>Tests d'intégration avec adaptateurs réels</li>
-        <li>Mocks et stubs pour les ports</li>
-        <li>Tests d'acceptance</li>
-        <li>Coverage et qualité</li>
-      </ul>
-    </div>
+  <div class="card">
+    <h3>Module 3 : Implémentation guidée</h3>
+    <ul>
+      <li>Création d’un domaine métier pur</li>
+      <li>Implémentation de ports primaires (API ou CLI simple)</li>
+      <li>Implémentation d’un port secondaire (ex : persistance simplifiée)</li>
+      <li>Injection de dépendances (principe et mise en œuvre simple)</li>
+    </ul>
+  </div>
 
-    <div class="card">
-      <h3>Module 5 : Refactoring et évolution</h3>
-      <ul>
-        <li>Refactoring progressif d'une application existante</li>
-        <li>Stratégies de migration</li>
-        <li>Cohabitation avec du code legacy</li>
-        <li>Patterns complémentaires (CQRS, Event Sourcing)</li>
-        <li>Utilisation efficace des assistants IA (GitHub Copilot, ChatGPT...)</li>
-      </ul>
-    </div>
+  <div class="card">
+    <h3>Module 4 : Tests et qualité</h3>
+    <ul>
+      <li>Tests unitaires du domaine (sans infrastructure)</li>
+      <li>Mocks et stubs pour les ports</li>
+      <li>Introduction aux tests d’intégration</li>
+      <li>Bonnes pratiques pour préserver la testabilité</li>
+    </ul>
+  </div>
 
-    <div class="card highlight">
-      <h3>Livrables inclus</h3>
-      <ul>
-        <li>Support de formation complet (PDF)</li>
-        <li>Code source des exemples (Python ou C++)</li>
-        <li>Exercices et corrections</li>
-        <li>Template de projet architecture hexagonale</li>
-        <li>Guide des bonnes pratiques avec les assistants IA</li>
-        <li>Checklist de refactoring</li>
-        <li>Attestation de formation</li>
-      </ul>
-    </div>
-  </section>
+  <div class="card">
+    <h3>Module 5 : Introduction au refactoring</h3>
+    <ul>
+      <li>Identification des violations architecturales</li>
+      <li>Refactoring progressif d’un exemple simplifié</li>
+      <li>Premières stratégies de migration</li>
+    </ul>
+  </div>
+
+  <div class="card highlight" style="margin-top: 32px;">
+    <h3>Option approfondissement – 3ᵉ jour (équipes en production)</h3>
+    <p class="small muted">
+      Objectif : ancrer la démarche dans votre contexte réel et construire une stratégie durable.
+    </p>
+    <ul>
+      <li>Analyse d’un extrait de votre code ou d’un cas représentatif</li>
+      <li>Identification détaillée des violations architecturales</li>
+      <li>Refactoring progressif vers une architecture hexagonale</li>
+      <li>Stratégies de migration pour projet existant (cohabitation avec legacy)</li>
+      <li>Patterns complémentaires (CQRS, Event Sourcing) – principes et cas d’usage</li>
+      <li>Utilisation efficace des assistants IA (Copilot, ChatGPT) sans amplifier la dette technique</li>
+      <li>Élaboration d’un plan d’action post-formation</li>
+    </ul>
+  </div>
+
+  <div class="card highlight">
+    <h3>Livrables inclus</h3>
+    <ul>
+      <li>Support de formation complet (PDF)</li>
+      <li>Code source des exemples (Python ou C++)</li>
+      <li>Exercices et corrections</li>
+      <li>Template de projet architecture hexagonale</li>
+      <li>Checklist de refactoring</li>
+      <li>Attestation de formation</li>
+    </ul>
+  </div>
+</section>
+
 
   <section style="background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);">
     <h2>Pourquoi cette formation est différente</h2>
@@ -301,7 +332,8 @@ if (document.readyState === 'loading') {
     <div class="grid">
       <div class="card">
         <h3>Durée</h3>
-        <p>1 à 2 jours selon vos besoins et niveau</p>
+        <p>Format standard : 2 jours</p>
+        <p>Option approfondissement : +1 jour orienté refactoring et migration</p>
       </div>
       <div class="card">
         <h3>Format</h3>
@@ -328,15 +360,6 @@ if (document.readyState === 'loading') {
           Tarif adapté à la durée, au nombre de participants et aux modalités.
           Formation dans vos locaux ou à distance.
         </p>
-      </div>
-      <div class="card">
-        <h3>Financement</h3>
-        <p><strong>Prise en charge possible</strong></p>
-        <ul class="small" style="margin-top: 12px;">
-          <li>OPCO (Opérateurs de Compétences)</li>
-          <li>Pôle Emploi (AIF)</li>
-          <li>CPF : En cours de référencement</li>
-        </ul>
       </div>
     </div>
 
