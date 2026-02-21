@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Offres — M87 DEV</title>
+  <title>Développement logiciel freelance — M87 DEV</title>
   <meta name="description" content="Services de développement, conseil en architecture logicielle et accompagnement technique proposés par M87 DEV. Spécialité : maintenabilité, dette technique, architecture durable." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
     </div>
     <nav class="desktop-nav">
       <a href="../index.html">Accueil</a>
-      <a href="offres.html">Développement</a>
+      <a href="developpement.html">Développement</a>
       <a href="formations.html">Formations</a>
       <a href="a-propos.html">À propos</a>
       <a href="contact.html">Contact</a>
@@ -34,7 +34,7 @@
   </div>
   <nav class="mobile-nav" id="mobileNav">
     <a href="../index.html" onclick="toggleMobileMenu()">Accueil</a>
-    <a href="offres.html" onclick="toggleMobileMenu()">Développement</a>
+    <a href="developpement.html" onclick="toggleMobileMenu()">Développement</a>
     <a href="formations.html" onclick="toggleMobileMenu()">Formations</a>
     <a href="a-propos.html" onclick="toggleMobileMenu()">À propos</a>
     <a href="contact.html" onclick="toggleMobileMenu()">Contact</a>
@@ -58,15 +58,51 @@ function toggleMobileMenu() {
 
   <section>
     <h2>Prestations</h2>
+    <p class="muted" style="margin-bottom: 24px;">Missions en présentiel ou à distance, sur des projets exigeants en termes de qualité et d'architecture.</p>
+
     <div class="card">
-      <p>Missions en C++ moderne et Python, en présentiel ou à distance.</p>
+      <h3>C++ moderne</h3>
+      <p>Expertise principale, avec plus de 25 ans de pratique sur des projets industriels et R&amp;D.</p>
       <ul style="margin-top: 12px;">
-        <li>Conception et implémentation de composants logiciels</li>
-        <li>Migration et modernisation de code legacy</li>
-        <li>Mise en place de tests unitaires et d'intégration</li>
-        <li>Refactoring et amélioration de code existant</li>
-        <li>Outillage qualité (CI/CD, analyseurs statiques, couverture)</li>
+        <li>Conception et implémentation de composants C++ modernes (C++17/20)</li>
+        <li>Développement d'applications desktop ou mobile avec Qt/QML</li>
+        <li>Migration et modernisation de code legacy C++ : réduction de la dette technique</li>
+        <li>Refactoring progressif et sécurisé par les tests</li>
       </ul>
+      <p class="small muted" style="margin-top: 12px;">
+        Expérience notable : réécriture de backends centraux du système de réservation Amadeus (2022–2024), 
+        développement d'algorithmes ML basés sur la librairie open source Khiops (Orange Labs / Inetum, 2011–2022).
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Python / FastAPI</h3>
+      <p>Développement de services backend et d'APIs, seul ou en complément d'un cœur applicatif C++.</p>
+      <ul style="margin-top: 12px;">
+        <li>Conception et implémentation d'APIs REST avec FastAPI</li>
+        <li>Intégration de services C++ et Python via REST ou SOAP</li>
+        <li>Scripting, automatisation, outillage de build et de qualité</li>
+        <li>Tests automatiques et validation de services</li>
+      </ul>
+      <p class="small muted" style="margin-top: 12px;">
+        Expérience notable : backends Python/C++ multiplexés pour Amadeus, 
+        interfaces Python de la librairie Khiops.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Machine learning — bonne connaissance des fondamentaux</h3>
+      <p>
+        8 ans de développement au sein d'équipes R&amp;D en machine learning (Orange Labs, PredicSis). 
+        Implémentation en C++ et Python d'algorithmes classiques :
+        classification supervisée, arbres de décision, random forests, régression logistique, 
+        réseaux de neurones, KMeans, fouille de textes.
+      </p>
+      <p style="margin-top: 12px;">
+        Cette connaissance des fondamentaux peut être utile pour des projets alliant 
+        ingénierie logicielle et composants ML : intégration de modèles, outillage, 
+        fiabilisation du pipeline de données.
+      </p>
     </div>
   </section>
 
